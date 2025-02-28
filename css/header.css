@@ -18,9 +18,10 @@
 }
 
 .title-header-container > h3{
-    font-family: 'Schoolbell', sans-serif;
-    font-weight: bold;
-    font-size: 20.8px;
+    font-family:Arial;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(50, 50, 50);;
 }
 
 .title-header-container{
