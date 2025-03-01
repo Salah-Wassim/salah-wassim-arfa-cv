@@ -1,0 +1,65 @@
+.fa-qrcode{
+    font-size: 25px;
+}
+
+.btn-scan {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.021);
+    transition: all 0.3s;
+    float: right;
+  }
+  
+  .btn-scan .fa-qrcode {
+    height: 16px;
+    fill: rgb(77, 77, 77);
+    transition: all 0.3s;
+  }
+
+  .btn-scan:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+  }
+
+/*QR_CODE IMG*/
+
+.qr-code-section{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    flex: 0 1 auto;
+    gap: 10px;
+}
+
+.qr-code-container-img {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 170px;
+    height: 170px;
+    border-radius: 20%;
+    padding: 1.5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+    margin: 10px;
+    z-index: 9999;
+    bottom: 70px;
+    background-color: rgb(59, 59, 59);
+}
+.qr-code{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .qr-code-section{
+       margin-right: 7px;
+    }
+}
