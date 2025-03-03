@@ -1,0 +1,36 @@
+.presentation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 120px;
+}
+.presentation-content{
+    margin: 0 0 50px 0;
+}
+.photo-container{
+    width: 300px;
+    height: 300px;
+}
+.photo-container img{
+    width: 100%;
+    height: auto;
+}
+h1{
+    font-size: 44px;
+    font-weight: bold;
+}
+.accroche-container{
+    width: 50%;
+}
+.accroche-container p{
+    text-align: left;
+    color: #21243D;
+    max-width: 1500px;
+    min-width: 400px;
+}
+@media screen and (max-width: 600px) {
+    .presentation{
+      flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,7 @@
+.articles-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 0;
+}
