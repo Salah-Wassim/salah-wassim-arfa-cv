@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/portfolio/button-contact.css">
     <link rel="stylesheet" href="css/portfolio/articles-recent.css">
     <link rel="stylesheet" href="css/portfolio/articles-cards.css">
+    <link rel="stylesheet" href="css/portfolio/works-cards.css">
     <title>salah-wassim-arfa-cv</title>
 </head>
 <body>
@@ -46,7 +47,7 @@
                     <div class="presentation-content-text">
                         <div class="presentation-content h1-container">
                             <h1>Salah-Wassim ARFA,</h1>
-                            <h1>Développeur Web et Mobile</h1>
+                            <h1>Développeur Web & Mobile</h1>
                         </div>
                         <div class="presentation-content accroche-container">
                             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
@@ -67,30 +68,15 @@
                                 <a href="">Voir tout</a>
                             </div>
                         </div>
-                        <div class="articles-cards">
-                            <div class="article-card">
-                                <div class="article-card__corner"></div>
-                                <div class="article-card__img">
-                                    <span class="article-card__span">Category</span>
-                                </div>
-                                <div class="article-card-int">
-                                    <p class="article-card-int__title">This is the article title</p>
-                                    <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipiscing elit, donec suspendisse vulputate dictumst enim per mus imperdiet, platea non massa dictum tempus sapien.</p>
-                                    <button class="article-card-int__button">Show</button>
-                                </div>
-                            </div>
-                            <div class="article-card">
-                                <div class="article-card__corner"></div>
-                                <div class="article-card__img">
-                                    <span class="article-card__span">Category</span>
-                                </div>
-                                <div class="article-card-int">
-                                    <p class="article-card-int__title">This is the article title</p>
-                                    <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipiscing elit, donec suspendisse vulputate dictumst enim per mus imperdiet, platea non massa dictum tempus sapien.</p>
-                                    <button class="article-card-int__button">Show</button>
-                                </div>
-                            </div>
+                        <div class="articles-cards" id="articlesContainer"></div>
+                    </div>
+                </div>
+                <div class="works">
+                    <div class="works-content">
+                        <div class="works-title">
+                            <p>Projets</p>
                         </div>
+                        <div class="works-cards" id="worksContainer"></div>
                     </div>
                 </div>
             </div>
@@ -157,5 +143,7 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="js/articles.js"></script>
+    <script type="text/javascript" src="js/works.js"></script>
 </body>
 </html>

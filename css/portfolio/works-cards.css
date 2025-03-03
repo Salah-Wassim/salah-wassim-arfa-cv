@@ -1,0 +1,54 @@
+.works-content{
+    margin: 50px 120px;
+}
+.works-title > p{
+    font-size: 22px;
+    color: #21243D;
+    padding: 10px 0;
+}
+.works-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0;
+    gap:4rem;
+}
+.work-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+.work-card-image{
+    min-width: 246px;
+    max-width: 246px;
+}
+.work-card-image > img{
+    width: 100%;
+    border-radius: 6px;
+}
+.work-space{margin-bottom: 20px;}
+.work-card-header > p{
+    font-size: 30px;
+    font-weight: bold;
+    color: #21243D;
+}
+.work-card-tag{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.tag-year{
+    display: inline-block;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 25px;
+    background-color: #142850;
+    font-weight: bold;
+}
+.work-card-description > p{
+    font-size: 16px;
+    color: #21243D;
+    max-width: 650px;
+}
