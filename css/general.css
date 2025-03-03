@@ -14,19 +14,12 @@ html{
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 50px;
 }
 
 .main-container{
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* S'étend sur toute la hauteur de la fenêtre */
-}
-
-@media screen and (max-width: 600px) {
-  body{
-    margin: 0;
-  }
 }
 
 .btn-back{
