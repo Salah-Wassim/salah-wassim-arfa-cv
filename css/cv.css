@@ -1,5 +1,6 @@
 .cv{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin: 20px 50px;
 }
 
 .align-container{
@@ -7,4 +8,10 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .cv{
+      margin: 20px 0;
+    }
 }
