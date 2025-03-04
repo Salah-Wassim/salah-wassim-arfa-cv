@@ -42,8 +42,33 @@ header{
 .title-header-container{
     margin-left: 5px;
 }
-
 .avatar-header{
     width:100%;
     border-radius: 50%;
 }
+
+.header-right-content a {
+    margin: 0 1rem;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+}
+
+.header-right-content a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0;
+    height: 2px;
+    background-color: #000; 
+    transition: width var(--transition-speed) ease;
+}
+
+.header-right-content a:hover::after {
+    width: 100%;
+}
+
