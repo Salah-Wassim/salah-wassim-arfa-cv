@@ -23,14 +23,6 @@ const articlesData = [
         readingTime: "4 minutes",
         imageUrl: "assets/article3.jpg"
     },
-    {
-        title: "How to Improve Your Coding Skills",
-        author: "Alice Brown",
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum provident a, ipsa maiores deleniti consectetur nobis et eaque.",
-        publishedDate: "5th August, 2023",
-        readingTime: "4 minutes",
-        imageUrl: "assets/article3.jpg"
-    }
 ];
 
 function generateArticles() {
