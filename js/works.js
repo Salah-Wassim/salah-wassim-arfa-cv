@@ -1,27 +1,27 @@
 const worksData = [
     {
         scr: "assets/article.PNG",
-        alt:"article javascript",
-        title: "Designing Dashboards",
-        tagYear: "2020",
+        alt:"Projet Create Your Team",
+        title: "Create Your Team",
+        tagYear: "2024",
         tagTechnos:["HTML", "CSS", "JS"],
-        description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum provident a, ipsa maiores deleniti consectetur nobis et eaque."
+        description:"Create Your Team permet de créer des équipes. Projet qui explore le concept de drag and drop"
     },
     {
         scr: "assets/article.PNG",
-        alt:"article javascript",
-        title: "Designing Dashboards",
-        tagYear: "2020",
-        tagTechnos:["HTML", "CSS", "JS"],
-        description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum provident a, ipsa maiores deleniti consectetur nobis et eaque."
+        alt:"Projet PGCD",
+        title: "PGCD (Plus Grand Commun Diviseur)",
+        tagYear: "2023",
+        tagTechnos:["HTML", "CSS", "JS", "Jenkins", "SEO", "Vercel"],
+        description:"PGCD est une application web qui permet de calculer rapidement et gratuitement le PGCD et le PPCM de deux ou trois entiers"
     },
     {
         scr: "assets/article.PNG",
-        alt:"article javascript",
-        title: "Designing Dashboards",
-        tagYear: "2020",
-        tagTechnos:["HTML", "CSS", "JS"],
-        description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum provident a, ipsa maiores deleniti consectetur nobis et eaque."
+        alt:"Projet SalahBook",
+        title: "SalahBook - Blog",
+        tagYear: "2021",
+        tagTechnos:["PHP", "Composer", "HTML5", "CSS3", "Javascript", "MySQL"],
+        description:"Blog en cours de création. Projet réalisé sans framework afin d’intégrer manuellement des mécanismes fonctionnels et de sécurité, tout en approfondissant la compréhension des concepts fondamentaux."
     },
 ];
 
