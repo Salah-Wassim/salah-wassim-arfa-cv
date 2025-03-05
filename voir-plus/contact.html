@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
     </noscript>
+    <link rel="stylesheet" href="../css/portfolio/portfolio-general.css">
+    <link rel="stylesheet" href="../css/portfolio/portfolio-presentation.css">
+    <link rel="stylesheet" href="../css/portfolio/contact.css">
     <title>Mon CV - Contact</title>
 </head>
 <body>
@@ -38,15 +41,39 @@
                 </div>
             </div>
         </header>
+        <section class="contact">
+            <form id="contactForm" class="form-contact" action="https://formspree.io/f/mrbpzznz" method="POST">
+                <label for="name">Nom :</label>
+                <input class="input-form-contact input-form-contact-name" type="text" id="name" name="name" placeholder="Votre nom" required>
+            
+                <label for="email">Adresse e-mail :</label>
+                <input class="input-form-contact input-form-contact-email" type="email" id="email" name="email" placeholder="Votre e-mail" required>
+            
+                <label for="subject">Sujet :</label>
+                <select id="subject" name="subject" required>
+                    <option value="opportunité">Opportunité d’alternance / emploi</option>
+                    <option value="collaboration">Collaboration / Projet freelance</option>
+                    <option value="conseils">Conseils & Mentorat</option>
+                    <option value="feedback">Retour / Feedback</option>
+                    <option value="autre">Autre</option>
+                </select>
+              
+                <label for="message">Message :</label>
+                <textarea class="input-form-contact input-form-contact-message" id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+              
+                <button class="btn-form-contact" type="submit">Envoyer</button>
+                <p class="message-info-form-contact"></p>
+            </form>
+        </section>
         <footer class="footer">
             <p>&copy; 2025 - salah-wassim-arfa-cv - Tous droits réservés.</p>
             <div class="footer-content-bottom">
                 <div class="cc-mc-container">
                     <div class="policy cgu-container">
-                        <a href="cgu.html" class="cgu-link" title="Conditions Générales d'Utilisation" rel="noopener">Conditions Générales d'Utilisation</a>
+                        <a href="../cgu.html" class="cgu-link" title="Conditions Générales d'Utilisation" rel="noopener">Conditions Générales d'Utilisation</a>
                     </div>
                     <div class="policy ml-container">
-                        <a href="mentions-legales.html" class="ml-link" title="Mentions Légales" rel="noopener">Mentions Légales</a>
+                        <a href="../mentions-legales.html" class="ml-link" title="Mentions Légales" rel="noopener">Mentions Légales</a>
                     </div>
                 </div>
                 <ul class="footer-list-social-networks">
@@ -100,5 +127,6 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="../js/burger.js"></script>
 </body>
 </html>
