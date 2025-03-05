@@ -133,3 +133,9 @@ select {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 426px){
+    .contact {
+        margin: 6rem 0;
+    }
+}
