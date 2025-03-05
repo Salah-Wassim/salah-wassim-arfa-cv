@@ -5,7 +5,7 @@
 }
 
 .article-card {
-    max-width: 420px;
+    /* max-width: 420px; */
     position: relative;
     display: block;
     overflow: hidden;
