@@ -74,7 +74,10 @@
     color: var(--heading-color);
     margin: 0 0 1rem 0;
 }
-
+.work-card-header a{
+    text-decoration: none;
+    cursor: pointer;
+}
 .work-card-tag {
     display: flex;
     align-items: center;
