@@ -72,3 +72,43 @@ header{
     width: 100%;
 }
 
+/*BURGER*/
+.btn-burger{
+    display: none;
+    background:none;
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    width: auto;
+    border: none;
+}
+
+@media screen and (max-width: 620px){
+    .header-content{
+        display: block;
+    }
+    .header-right-content{
+        display: none;
+    }
+    .header-right-content.show{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-left-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .btn-burger{
+        display: block;
+        margin: 0;
+        height: auto;
+        padding: 0;
+        cursor: pointer;
+    }
+    .header-right-content a{
+         margin: 1rem 0;
+    }
+}
+
