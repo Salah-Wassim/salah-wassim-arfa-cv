@@ -1,4 +1,4 @@
-const articlesData = [
+let articlesData = [
     {
         title: "Test de charge avec Artillery",
         href:"https://www.linkedin.com/pulse/test-de-charge-avec-artillery-salah-wassim-arfa-4oywe/?trackingId=DZzqCVqMQMKXx4B5xNPpag%3D%3D",
@@ -37,7 +37,9 @@ const articlesData = [
     },
 ];
 
-const recentArticlesData = articlesData.slice(0, 3);
+
+
+let recentArticlesData = articlesData.slice(0, 3);
 
 function generateArticles(idElement, array) {
     const container = document.getElementById(idElement);
@@ -72,4 +74,13 @@ function generateArticles(idElement, array) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", generateArticles("articlesContainer", recentArticlesData));
+document.addEventListener("DOMContentLoaded", ()=>{
+    if(document.getElementById("articlesContainer")){
+        recentArticlesData = recentArticlesData.sort((a, b) => b.publishedDate - a.publishedDate)
+        generateArticles("articlesContainer", recentArticlesData)
+    }
+    if(document.getElementById("articlesContainer2")){
+        articlesData = articlesData.sort((a, b) => b.publishedDate - a.publishedDate)
+        generateArticles("articlesContainer2", articlesData)
+    }
+})

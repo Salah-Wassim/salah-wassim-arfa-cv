@@ -1,6 +1,6 @@
-const worksData = [
+let worksData = [
     {
-        scr: "assets/article.PNG",
+        scr: "article.PNG",
         alt:"Projet Create Your Team",
         title: "Create Your Team",
         href:"",
@@ -9,7 +9,7 @@ const worksData = [
         description:"Create Your Team permet de créer des équipes. Projet qui explore le concept de drag and drop"
     },
     {
-        scr: "assets/article.PNG",
+        scr: "article.PNG",
         alt:"Projet PGCD",
         title: "PGCD (Plus Grand Commun Diviseur)",
         href:"",
@@ -18,7 +18,7 @@ const worksData = [
         description:"PGCD est une application web qui permet de calculer rapidement et gratuitement le PGCD et le PPCM de deux ou trois entiers"
     },
     {
-        scr: "assets/article.PNG",
+        scr: "article.PNG",
         alt:"Projet SalahBook",
         title: "SalahBook - Blog",
         href:"",
@@ -27,7 +27,7 @@ const worksData = [
         description:"Blog en cours de création. Projet réalisé sans framework afin d’intégrer manuellement des mécanismes fonctionnels et de sécurité, tout en approfondissant la compréhension des concepts fondamentaux."
     },
     {
-        scr: "assets/article.PNG",
+        scr: "article.PNG",
         alt:"Projet ParkLib",
         title: "Park'Lib",
         href:"",
@@ -36,7 +36,7 @@ const worksData = [
         description:"Park'Lib est une application qui permet de s'informer sur les parkings public d'une ville et de faire de la location de places de parkings entre particulier"
     },
     {
-        scr: "assets/article.PNG",
+        scr: "article.PNG",
         alt:"Projet Bot Discord",
         title: "Bot Discord",
         href:"",
@@ -46,7 +46,12 @@ const worksData = [
     },
 ];
 
-const recentWorksData = worksData.slice(0, 3);
+const currentPage = window.location.pathname;
+
+const baseUrlSrc = currentPage.includes("projets.html") ? "../" : "";
+const urlSrc = "assets/";
+
+let recentWorksData = worksData.slice(0, 3);
 
 function generateWorks(idElement, array) {
     const container = document.getElementById(idElement);
@@ -58,7 +63,7 @@ function generateWorks(idElement, array) {
 
         workCard.innerHTML = `
             <div class="work-card-image">
-                <img src="${work.scr}" alt="${work.alt}">
+                <img src="${baseUrlSrc + urlSrc + work.scr}" alt="${work.alt}">
             </div>
             <div class="work-card-text">
                 <div class="work-space work-card-header">
@@ -80,4 +85,13 @@ function generateWorks(idElement, array) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", generateWorks("worksContainer", recentWorksData));
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("worksContainer")) {
+        generateWorks("worksContainer", recentWorksData);
+    }
+
+    if (document.getElementById("worksContainer2")) {
+        worksData = worksData.sort((a, b) => b.tagYear - a.tagYear)
+        generateWorks("worksContainer2", worksData);
+    }
+});

@@ -46,3 +46,16 @@
     background: rgba(111, 66, 193, 0.1);
     text-decoration: underline;
 }
+
+/*PAGE BLOG*/
+
+.articles {
+    background: var(--background-color);
+    padding: 4rem 0;
+}
+
+.articles-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
