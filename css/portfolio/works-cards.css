@@ -21,7 +21,7 @@
 
 .works-title p {
     font-size: 1.75rem;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: var(--heading-color);
     margin: 0 0 2rem 0;
 }
@@ -34,6 +34,7 @@
 
 .work-card {
     display: flex;
+    cursor: pointer;
     gap: 2rem;
     background: white;
     padding: 2rem;

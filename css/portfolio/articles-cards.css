@@ -5,39 +5,47 @@
 }
 
 .article-card {
-    /* max-width: 420px; */
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border: 1px solid rgba(243, 244, 246, );
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: #fff;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(243, 244, 246, 1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-speed) ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px); 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .article-header {
   display: flex;
   justify-content: space-between;
-  grid-gap: 1rem;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 1.5rem; 
 }
 
 .article-title {
-  font-size: 1.125rem;
-  line-height: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 700;
   color: rgba(17, 24, 39, 1);
   text-decoration: none;
+  transition: color var(--transition-speed) ease;
 }
 
 .article-title:hover {
-  text-decoration: underline royalblue;
+  color: royalblue;
+  text-decoration: none;
 }
 
 .article-name {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem; 
+  line-height: 1.25rem;
   font-weight: 500;
   color: rgba(75, 85, 99, 1);
 }
@@ -45,30 +53,35 @@
 .article-image {
   display: block;
   flex-shrink: 0;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 0.5rem;
+  height: 4rem; 
+  width: 4rem;
+  border-radius: 0.75rem;
   object-fit: cover;
   background-color: royalblue;
+  transition: transform var(--transition-speed) ease;
+}
+
+.article-image:hover {
+  transform: scale(1.05);
 }
 
 .article-description {
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
   color: rgba(107, 114, 128, 1);
 }
 
 .article-post-info {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   display: flex;
-  grid-gap: 1rem;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .article-cr {
   display: flex;
   flex-direction: column-reverse;
+  gap: 0.25rem;
 }
 
 .article-dt {
@@ -79,7 +92,7 @@
 }
 
 .article-dd {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1rem;
-  color: rgba(107, 114, 128,1);
+  color: rgba(107, 114, 128, 1);
 }

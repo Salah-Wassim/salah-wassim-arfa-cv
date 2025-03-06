@@ -3,7 +3,7 @@ let worksData = [
         scr: "article.PNG",
         alt:"Projet Create Your Team",
         title: "Create Your Team",
-        href:"",
+        href:"https://github.com/Salah-Wassim/create-your-team",
         tagYear: "2024",
         tagTechnos:["HTML", "CSS", "JS"],
         description:"Create Your Team permet de créer des équipes. Projet qui explore le concept de drag and drop"
@@ -12,7 +12,7 @@ let worksData = [
         scr: "article.PNG",
         alt:"Projet PGCD",
         title: "PGCD (Plus Grand Commun Diviseur)",
-        href:"",
+        href:"https://pgcd.vercel.app",
         tagYear: "2023",
         tagTechnos:["HTML", "CSS", "JS", "Jenkins", "SEO", "Vercel"],
         description:"PGCD est une application web qui permet de calculer rapidement et gratuitement le PGCD et le PPCM de deux ou trois entiers"
@@ -30,7 +30,7 @@ let worksData = [
         scr: "article.PNG",
         alt:"Projet ParkLib",
         title: "Park'Lib",
-        href:"",
+        href:"https://github.com/Salah-Wassim/Parklib-Front",
         tagYear: "2021",
         tagTechnos:["React Native", "Node.js", "Angular", "Redis", "Docker", "MySQL"],
         description:"Park'Lib est une application qui permet de s'informer sur les parkings public d'une ville et de faire de la location de places de parkings entre particulier"
@@ -39,7 +39,7 @@ let worksData = [
         scr: "article.PNG",
         alt:"Projet Bot Discord",
         title: "Bot Discord",
-        href:"",
+        href:"https://github.com/Salah-Wassim/bot-discord",
         tagYear: "2022",
         tagTechnos:["Javascript"],
         description:"Description à venir"
@@ -60,6 +60,10 @@ function generateWorks(idElement, array) {
     array.forEach(work => {
         const workCard = document.createElement("div");
         workCard.classList.add("work-card");
+        workCard.setAttribute("tabindex", "0");
+        workCard.onclick = function(){
+            window.location.href = work.href
+        }
 
         workCard.innerHTML = `
             <div class="work-card-image">
