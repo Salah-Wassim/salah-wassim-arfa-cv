@@ -48,8 +48,8 @@ header{
 }
 
 .header-right-content a {
-    margin: 0 1rem;
     color: #000;
+    margin: 0 1rem;
     font-weight: 600;
     text-decoration: none;
     font-size: 1.2rem;
@@ -70,6 +70,11 @@ header{
 
 .header-right-content a:hover::after {
     width: 100%;
+}
+
+.header-active-link {
+    color: #FF6464 !important;
+    font-weight: bold;
 }
 
 /*BURGER*/
