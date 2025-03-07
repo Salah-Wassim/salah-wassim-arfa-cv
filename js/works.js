@@ -40,9 +40,27 @@ let worksData = [
         alt:"Projet Bot Discord",
         title: "Bot Discord",
         href:"https://github.com/Salah-Wassim/bot-discord",
-        tagYear: "2022",
+        tagYear: "2023",
         tagTechnos:["Javascript"],
-        description:"Description à venir"
+        description:"Bot interactif capable de répondre à trois commandes : PingMe : Vérifie la réactivité du bot. Blague : Génère une blague aléatoire. Gif : Recherche et affiche un GIF depuis la plateforme Giphy."
+    },
+    {
+        scr: "article.PNG",
+        alt:"Projet BookShop",
+        title: "BookShop",
+        href:"https://github.com/Salah-Wassim/BookShop",
+        tagYear: "2023",
+        tagTechnos:["Vue.js", "Vite"],
+        description:"Bot interactif capable de répondre à trois commandes : PingMe : Vérifie la réactivité du bot. Blague : Génère une blague aléatoire. Gif : Recherche et affiche un GIF depuis la plateforme Giphy."
+    },
+    {
+        scr: "article.PNG",
+        alt:"Projet Immobilier",
+        title: "Immobilier",
+        href:"https://github.com/Salah-Wassim/immobilier-front/tree/master",
+        tagYear: "2021",
+        tagTechnos:["Angular", "Node.js", "MySQL"],
+        description:"Projet visant à recréer une plateforme immobilière."
     },
 ];
 
