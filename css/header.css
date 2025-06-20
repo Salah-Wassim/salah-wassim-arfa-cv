@@ -40,11 +40,12 @@ header{
     align-items: center;
 }
 
-.title-header-container > h3{
+.title-header-container > h3 > a{
     font-family:Arial;
     font-size: 1.3rem;
     font-weight: 600;
-    color: rgb(50, 50, 50);;
+    color: rgb(50, 50, 50);
+    text-decoration: none;
 }
 
 .title-header-container{
