@@ -62,6 +62,15 @@ let worksData = [
         tagTechnos:["Angular", "Node.js", "MySQL"],
         description:"Projet visant à recréer une plateforme immobilière."
     },
+    {
+        scr: "article.PNG",
+        alt:"Projet Amazon",
+        title: "Amazon",
+        href:"https://github.com/Salah-Wassim/Amazon",
+        tagYear: "2021",
+        tagTechnos:["Python", "Selenium", "ChromeDriver"],
+        description:"Projet permettant d'effectuer du web scraping sur le site d'Amazon afin d'extraire automatiquement des données."
+    },
 ];
 
 const currentPage = window.location.pathname;
