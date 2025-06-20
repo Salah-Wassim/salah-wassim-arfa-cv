@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #6f42c1;
+    --secondary-color: #8a63d2;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --heading-color: #0f172a;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    gap: 4rem;
+}
+
+.presentation-content-text {
+    flex: 1;
+}
+
+.h1-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+}
+
+.h1-container h1:first-child {
+    color: #FF6464;
+}
+
+.accroche-container {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.accroche-container p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0 0 2rem 0;
+}
+
+.presentation-content-photo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.photo-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform var(--transition-speed) ease;
+}
+
+.photo-container:hover {
+    transform: scale(1.05);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .presentation {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+    .h1-container h1 {
+        font-size: 2rem;
+    }
+    
+    .accroche-container {
+        max-width: 100%;
+    }
+    
+    .photo-container {
+        width: 250px;
+        height: 250px;
+    }
+}
