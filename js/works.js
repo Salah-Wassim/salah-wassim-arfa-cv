@@ -73,18 +73,6 @@ let worksData = [
     },
 ];
 
-const selectProject = document.getElementById("select-project-by-year");
-
-selectProject.addEventListener('change', function filterProjectsByYear(event){
-    if(event.target.value !== "all"){
-       const worksDataFilter = worksData.filter(work => work.tagYear === event.target.value)
-       return generateWorks("worksContainer2", worksDataFilter)
-    }
-    else{
-        return generateWorks("worksContainer2", worksData)
-    }
-})
-
 const currentPage = window.location.pathname;
 
 const baseUrlSrc = currentPage.includes("projets.html") ? "../" : "";
@@ -136,5 +124,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("worksContainer2")) {
         worksData = worksData.sort((a, b) => b.tagYear - a.tagYear)
         generateWorks("worksContainer2", worksData);
+        const selectProject = document.getElementById("select-project-by-year");
+        selectProject.addEventListener('change', function filterProjectsByYear(event){
+            if(document.getElementById("worksContainer2")){
+                if(event.target.value !== "all"){
+                   const worksDataFilter = worksData.filter(work => work.tagYear === event.target.value)
+                   return generateWorks("worksContainer2", worksDataFilter)
+                }
+                else{
+                    return generateWorks("worksContainer2", worksData)
+                }
+            }
+        })
     }
 });
