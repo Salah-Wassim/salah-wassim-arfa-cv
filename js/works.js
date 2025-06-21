@@ -73,6 +73,20 @@ let worksData = [
     },
 ];
 
+const selectProject = document.getElementById("select-project-by-year");
+
+selectProject.addEventListener('change', function filterProjectsByYear(event){
+    if(event.target.value !== "all"){
+       const worksDataFilter = worksData.filter(work => work.tagYear === event.target.value)
+       return generateWorks("worksContainer2", worksDataFilter)
+    }
+    else{
+        return generateWorks("worksContainer2", worksData)
+    }
+})
+
+console.log("select-project", selectProject)
+
 const currentPage = window.location.pathname;
 
 const baseUrlSrc = currentPage.includes("projets.html") ? "../" : "";
