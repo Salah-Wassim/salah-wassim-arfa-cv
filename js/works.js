@@ -85,8 +85,6 @@ selectProject.addEventListener('change', function filterProjectsByYear(event){
     }
 })
 
-console.log("select-project", selectProject)
-
 const currentPage = window.location.pathname;
 
 const baseUrlSrc = currentPage.includes("projets.html") ? "../" : "";
