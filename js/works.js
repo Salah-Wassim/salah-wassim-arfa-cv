@@ -1,6 +1,6 @@
 let worksData = [
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet Create Your Team",
         title: "Create Your Team",
         href:"https://github.com/Salah-Wassim/create-your-team",
@@ -9,7 +9,7 @@ let worksData = [
         description:"Create Your Team permet de créer des équipes. Projet qui explore le concept de drag and drop"
     },
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet PGCD",
         title: "PGCD (Plus Grand Commun Diviseur)",
         href:"https://pgcd.vercel.app",
@@ -18,7 +18,7 @@ let worksData = [
         description:"PGCD est une application web qui permet de calculer rapidement et gratuitement le PGCD et le PPCM de deux ou trois entiers"
     },
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet SalahBook",
         title: "SalahBook - Blog",
         href:"",
@@ -27,7 +27,7 @@ let worksData = [
         description:"Blog en cours de création. Projet réalisé sans framework afin d’intégrer manuellement des mécanismes fonctionnels et de sécurité, tout en approfondissant la compréhension des concepts fondamentaux."
     },
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet ParkLib",
         title: "Park'Lib",
         href:"https://github.com/Salah-Wassim/Parklib-Front",
@@ -36,7 +36,7 @@ let worksData = [
         description:"Park'Lib est une application qui permet de s'informer sur les parkings public d'une ville et de faire de la location de places de parkings entre particulier"
     },
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet Bot Discord",
         title: "Bot Discord",
         href:"https://github.com/Salah-Wassim/bot-discord",
@@ -45,7 +45,7 @@ let worksData = [
         description:"Bot interactif capable de répondre à trois commandes : PingMe : Vérifie la réactivité du bot. Blague : Génère une blague aléatoire. Gif : Recherche et affiche un GIF depuis la plateforme Giphy."
     },
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet BookShop",
         title: "BookShop",
         href:"https://github.com/Salah-Wassim/BookShop",
@@ -54,7 +54,7 @@ let worksData = [
         description:"Bot interactif capable de répondre à trois commandes : PingMe : Vérifie la réactivité du bot. Blague : Génère une blague aléatoire. Gif : Recherche et affiche un GIF depuis la plateforme Giphy."
     },
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet Immobilier",
         title: "Immobilier",
         href:"https://github.com/Salah-Wassim/immobilier-front/tree/master",
@@ -63,7 +63,7 @@ let worksData = [
         description:"Projet visant à recréer une plateforme immobilière."
     },
     {
-        scr: "article.PNG",
+        scr: "work.png",
         alt:"Projet Amazon",
         title: "Amazon",
         href:"https://github.com/Salah-Wassim/Amazon",
