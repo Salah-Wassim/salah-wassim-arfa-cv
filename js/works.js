@@ -124,5 +124,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("worksContainer2")) {
         worksData = worksData.sort((a, b) => b.tagYear - a.tagYear)
         generateWorks("worksContainer2", worksData);
+        const selectProject = document.getElementById("select-project-by-year");
+        selectProject.addEventListener('change', function filterProjectsByYear(event){
+            if(event.target.value !== "all"){
+                const worksDataFilter = worksData.filter(work => work.tagYear === event.target.value)
+                if(worksDataFilter.length > 0){
+                    return generateWorks("worksContainer2", worksDataFilter)
+                }
+                else{
+                    generateWorks("worksContainer2", worksDataFilter)
+                    const p = document.createElement("p");
+                    p.innerHTML = "Aucun projet trouvé";
+                    p.classList.add("work-content-message")
+                    return document.getElementById("worksContainer2").appendChild(p)
+                }
+            }
+            else{
+                return generateWorks("worksContainer2", worksData)
+            }
+        })
     }
 });
