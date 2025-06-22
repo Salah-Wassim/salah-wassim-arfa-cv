@@ -27,7 +27,13 @@
     padding: 0 2rem;
 }
 
-.filter-works-year {
+.work-select-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.filter-works-year, .filter-works-sort {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -49,12 +55,12 @@
   padding-right: 40px; /* pour ne pas que le texte chevauche l'icône */
 }
 
-.filter-works-year:hover {
+.filter-works-year:hover, .filter-works-sort:hover{
   border-color: #F08A5D;
   box-shadow: 0 4px 8px rgba(216, 113, 73, 0.25);
 }
 
-.filter-works-year:focus {
+.filter-works-year:focus, .filter-works-sort:focus{
   outline: none;
   border-color: #F08A5D;
   box-shadow: 0 4px 8px rgba(216, 113, 73, 0.25);

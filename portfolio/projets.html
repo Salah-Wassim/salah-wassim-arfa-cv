@@ -48,13 +48,23 @@
                     <div class="works-content">
                         <div class="works-content-header">
                           <h2>Projets</h2>
-                          <select name="select-project-by-year" id="select-project-by-year" class="filter-works-year">
-                            <option value="all">Tout</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                          </select>
+                          <div class="work-select-container">
+                            <select name="select-project-by-year" id="select-project-by-year" class="filter-works-year">
+                              <optgroup label="Années">
+                                <option value="all">Tout</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                              </optgroup>
+                            </select>
+                            <select name="select-project-sort" id="select-project-sort" class="filter-works-sort">
+                              <optgroup label="Trier par ordre">
+                                <option value="c">Croissant</option>
+                                <option value="d" selected>Décroissant</option>
+                              </optgroup>
+                            </select>
+                          </div>
                         </div>
                         <div class="works-cards" id="worksContainer2"></div>
                     </div>
