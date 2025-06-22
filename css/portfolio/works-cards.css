@@ -27,7 +27,13 @@
     padding: 0 2rem;
 }
 
-.filter-works-year {
+.work-select-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.filter-works-year, .filter-works-sort {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

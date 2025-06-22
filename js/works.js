@@ -122,12 +122,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (document.getElementById("worksContainer2")) {
-        worksData = worksData.sort((a, b) => b.tagYear - a.tagYear)
         generateWorks("worksContainer2", worksData);
+        const selectProjectSort = document.getElementById("select-project-sort");
+        selectProjectSort.addEventListener("change", function filterProjectsSort(event){
+            console.log(event.target.value)
+            if(event.target.value === "c"){
+                const worksDataC = worksData.sort((a, b) => a.tagYear - b.tagYear)
+                return generateWorks("worksContainer2", worksDataC);
+            }
+            else{
+                const worksDataD = worksData.sort((a, b) => b.tagYear - a.tagYear)
+                return generateWorks("worksContainer2", worksDataD);
+            }
+        })
         const selectProject = document.getElementById("select-project-by-year");
         selectProject.addEventListener('change', function filterProjectsByYear(event){
+            if(event.target.value === ""){
+                return generateWorks("worksContainer2", worksData)
+            }
             if(event.target.value !== "all"){
                 const worksDataFilter = worksData.filter(work => work.tagYear === event.target.value)
+                selectProjectSort.disabled = event.target.value
+                selectProjectSort.style.cursor = "not-allowed"
                 if(worksDataFilter.length > 0){
                     return generateWorks("worksContainer2", worksDataFilter)
                 }
@@ -140,6 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             else{
+                selectProjectSort.disabled = false
+                selectProjectSort.style.cursor = "pointer"
                 return generateWorks("worksContainer2", worksData)
             }
         })
