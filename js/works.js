@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
         generateWorks("worksContainer2", worksData);
         const selectProjectSort = document.getElementById("select-project-sort");
         selectProjectSort.addEventListener("change", function filterProjectsSort(event){
-            console.log(event.target.value)
             if(event.target.value === "c"){
                 const worksDataC = worksData.sort((a, b) => a.tagYear - b.tagYear)
                 return generateWorks("worksContainer2", worksDataC);
