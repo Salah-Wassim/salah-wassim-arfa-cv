@@ -72,3 +72,9 @@
   transition: 0.4s;
   transform: translateX(-56px);
 }
+
+@media (max-width: 600px){
+    .btn-back-cv {
+      margin-left:9px;
+    }
+}
