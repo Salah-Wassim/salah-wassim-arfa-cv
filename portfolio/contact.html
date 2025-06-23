@@ -5,84 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Le site salah-wassim-arfa-cv a pour objectif de présenter le parcours professionnel et les compétences de Salah-Wassim Arfa.">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.rel='stylesheet'"/>
-    <link rel="preload" href="css/general.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="css/header.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="css/footer.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../css/general.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../css/header.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../css/footer.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
     </noscript>
-    <link rel="stylesheet" href="css/cv.css">
-    <link rel="stylesheet" href="css/download.css">
-    <link rel="stylesheet" href="css/learn-more.css">
-    <link rel="stylesheet" href="css/qr-code.css">
-    <title>salah-wassim-arfa-cv</title>
+    <link rel="stylesheet" href="../css/portfolio/portfolio-general.css">
+    <link rel="stylesheet" href="../css/portfolio/portfolio-presentation.css">
+    <link rel="stylesheet" href="../css/portfolio/contact.css">
+    <title>Mon CV - Contact</title>
 </head>
 <body>
     <div class="main-container">
-      <header>
-        <div class="header-content">
-          <div class="header-left-content">
-            <div class="avatar-and-title-header-container">
-                <div class="avatar-header-container">   
-                    <img loading="lazy" src="assets/profile.PNG" alt="Avatar" class="avatar-header">
+        <header>
+            <div class="header-content">
+                <div class="header-left-content">
+                    <div class="avatar-and-title-header-container">
+                        <div class="avatar-header-container">   
+                            <img loading="lazy" src="../assets/profile.PNG" alt="Avatar" class="avatar-header">
+                        </div>
+                        <div class="title-header-container title-header-container-pgcd">
+                            <h3><a href="../index.html">Mon CV</a></h3>
+                        </div>
+                    </div>
+                    <button class="btn-burger fa-solid fa-bars"></button>
                 </div>
-                <div class="title-header-container title-header-container-pgcd">
-                    <h3>Mon CV</h3>
+                <div class="header-right-content">
+                    <a class="header-link" href="blog.html">Blog</a>
+                    <a class="header-link" href="projets.html">Projets</a>
+                    <a class="header-link" href="a-propos.html">À propos</a>
+                    <a class="header-link" href="../portfolio.html">Portfolio</a>
                 </div>
             </div>
-            <button class="btn-burger fa-solid fa-bars"></button>
-          </div>
-          <div class="header-right-content">
-            <button class="btn-download">
-              <p class="text">
-              Télécharger 
-              </p>
-              <div class="svg">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-download" viewBox="0 0 16 16"> <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path> <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path> </svg>
-              </div>
-            </button>
-          </div>
-        </div>
-      </header>
-          <div class="cv">
-            <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-            border-radius: 8px; will-change: transform;">
-              <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                src="https://www.canva.com/design/DAGq53ZgUrk/8lRVVfkd-R4BLCxKs4hqvA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-              </iframe>
-          </div>
-          <div class="align-container">
-            <div class="learn-more-container">
-              <button class="learn-more">
-                <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-                </span>
-                <span class="button-text">Voir plus</span>
-              </button>
-            </div>
-            <div class="qr-code-section">
-              <button title="Scan moi" class="btn-scan fa-solid fa-qrcode"></button>
-              <div class="qr-code-container-img">
-                <img src="assets/qrcode.png" alt="qr-code" class="qr-code">
-              </div>
-            </div>
-          </div>
-        </div>
+        </header>
+        <section class="contact">
+            <h2>Contact</h2>
+            <form id="contactForm" class="form-contact" action="https://formspree.io/f/mrbpzznz" method="POST">
+                <label for="name">Nom :</label>
+                <input class="input-form-contact input-form-contact-name" type="text" id="name" name="name" placeholder="Votre nom" required>
+            
+                <label for="email">Adresse e-mail :</label>
+                <input class="input-form-contact input-form-contact-email" type="email" id="email" name="email" placeholder="Votre e-mail" required>
+            
+                <label for="subject">Sujet :</label>
+                <select id="subject" name="subject" required>
+                    <option value="opportunité">Opportunité d’alternance / emploi</option>
+                    <option value="collaboration">Collaboration / Projet freelance</option>
+                    <option value="conseils">Conseils & Mentorat</option>
+                    <option value="feedback">Retour / Feedback</option>
+                    <option value="autre">Autre</option>
+                </select>
+              
+                <label for="message">Message :</label>
+                <textarea class="input-form-contact input-form-contact-message" id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+              
+                <button class="btn-form-contact" type="submit">Envoyer</button>
+                <p class="message-info-form-contact"></p>
+            </form>
+        </section>
         <footer class="footer">
             <p>&copy; 2025 - salah-wassim-arfa-cv - Tous droits réservés.</p>
             <div class="footer-content-bottom">
                 <div class="cc-mc-container">
                     <div class="policy cgu-container">
-                        <a href="cgu.html" class="cgu-link" title="Conditions Générales d'Utilisation" rel="noopener">Conditions Générales d'Utilisation</a>
+                        <a href="../cgu.html" class="cgu-link" title="Conditions Générales d'Utilisation" rel="noopener">Conditions Générales d'Utilisation</a>
                     </div>
                     <div class="policy ml-container">
-                        <a href="mentions-legales.html" class="ml-link" title="Mentions Légales" rel="noopener">Mentions Légales</a>
+                        <a href="../mentions-legales.html" class="ml-link" title="Mentions Légales" rel="noopener">Mentions Légales</a>
                     </div>
                     <div>
-                      <a href="portfolio/contact.html" class="contact-link" rel="noopener">Contact</a>
+                      <a href="contact.html" class="contact-link" rel="noopener">Contact</a>
                     </div>
                 </div>
                 <ul class="footer-list-social-networks">
@@ -136,9 +132,7 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="js/download.js"></script>
-    <script type="text/javascript" src="js/learn-more.js"></script>
-    <script type="text/javascript" src="js/qr-code.js"></script>
-    <script type="text/javascript" src="js/burger.js"></script>
+    <script type="text/javascript" src="../js/burger.js"></script>
+    <script type="text/javascript" src="../js/header.js"></script>
 </body>
 </html>
