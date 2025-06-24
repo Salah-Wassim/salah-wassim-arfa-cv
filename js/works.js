@@ -115,28 +115,7 @@ function generateWorks(idElement, array) {
         container.appendChild(workCard);
     });
 }
-const selectProjectLangCheckbox = document.querySelectorAll('.filter-works-lang-content input[type="checkbox"]')
-function getSelectProjectLang(){
-    const projectLangSelected = [];
-    selectProjectLangCheckbox.forEach(langSelected => {
-        if(langSelected.checked){
-            projectLangSelected.push(langSelected.value)
-        }
-    })
-    return projectLangSelected
-}
-const btnSelectWorksLang = document.getElementById("btn-filter-works-lang");
-const selectProjectLangContent = document.querySelector(".filter-works-lang-content")
-btnSelectWorksLang.addEventListener("click", function(event){
-    event.stopPropagation()
-    selectProjectLangContent.classList.toggle("active");
-})
-document.addEventListener('click', function(event){
-    const isClickInside = btnSelectWorksLang.contains(event.target) || selectProjectLangContent.contains(event.target);
-    if(!isClickInside){
-        selectProjectLangContent.classList.remove("active");
-    }
-})
+
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("worksContainer")) {
         generateWorks("worksContainer", recentWorksData);
@@ -153,6 +132,28 @@ document.addEventListener("DOMContentLoaded", () => {
             else{
                 const worksDataD = worksData.sort((a, b) => b.tagYear - a.tagYear)
                 return generateWorks("worksContainer2", worksDataD);
+            }
+        })
+        const selectProjectLangCheckbox = document.querySelectorAll('.filter-works-lang-content input[type="checkbox"]')
+        function getSelectProjectLang(){
+            const projectLangSelected = [];
+            selectProjectLangCheckbox.forEach(langSelected => {
+                if(langSelected.checked){
+                    projectLangSelected.push(langSelected.value)
+                }
+            })
+            return projectLangSelected
+        }
+        const btnSelectWorksLang = document.getElementById("btn-filter-works-lang");
+        const selectProjectLangContent = document.querySelector(".filter-works-lang-content")
+        btnSelectWorksLang.addEventListener("click", function(event){
+            event.stopPropagation()
+            selectProjectLangContent.classList.toggle("active");
+        })
+        document.addEventListener('click', function(event){
+            const isClickInside = btnSelectWorksLang.contains(event.target) || selectProjectLangContent.contains(event.target);
+            if(!isClickInside){
+                selectProjectLangContent.classList.remove("active");
             }
         })
         let techSelected = []
