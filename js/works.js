@@ -5,7 +5,7 @@ let worksData = [
         title: "Create Your Team",
         href:"https://github.com/Salah-Wassim/create-your-team",
         tagYear: "2024",
-        tagTechnos:["HTML", "CSS", "JS"],
+        tagTechnos:["HTML", "CSS", "JavaScript"],
         description:"Create Your Team permet de créer des équipes. Projet qui explore le concept de drag and drop"
     },
     {
@@ -14,7 +14,7 @@ let worksData = [
         title: "PGCD (Plus Grand Commun Diviseur)",
         href:"https://pgcd.vercel.app",
         tagYear: "2023",
-        tagTechnos:["HTML", "CSS", "JS", "Jenkins", "SEO", "Vercel"],
+        tagTechnos:["HTML", "CSS", "JavaScript", "Jenkins", "SEO", "Vercel"],
         description:"PGCD est une application web qui permet de calculer rapidement et gratuitement le PGCD et le PPCM de deux ou trois entiers"
     },
     {
@@ -23,7 +23,7 @@ let worksData = [
         title: "SalahBook - Blog",
         href:"",
         tagYear: "2021",
-        tagTechnos:["PHP", "Composer", "HTML5", "CSS3", "Javascript", "MySQL"],
+        tagTechnos:["PHP", "Composer", "HTML", "CSS", "JavaScript", "MySQL"],
         description:"Blog en cours de création. Projet réalisé sans framework afin d’intégrer manuellement des mécanismes fonctionnels et de sécurité, tout en approfondissant la compréhension des concepts fondamentaux."
     },
     {
@@ -41,7 +41,7 @@ let worksData = [
         title: "Bot Discord",
         href:"https://github.com/Salah-Wassim/bot-discord",
         tagYear: "2023",
-        tagTechnos:["Javascript"],
+        tagTechnos:["JavaScript"],
         description:"Bot interactif capable de répondre à trois commandes : PingMe : Vérifie la réactivité du bot. Blague : Génère une blague aléatoire. Gif : Recherche et affiche un GIF depuis la plateforme Giphy."
     },
     {
@@ -115,7 +115,28 @@ function generateWorks(idElement, array) {
         container.appendChild(workCard);
     });
 }
-
+const selectProjectLangCheckbox = document.querySelectorAll('.filter-works-lang-content input[type="checkbox"]')
+function getSelectProjectLang(){
+    const projectLangSelected = [];
+    selectProjectLangCheckbox.forEach(langSelected => {
+        if(langSelected.checked){
+            projectLangSelected.push(langSelected.value)
+        }
+    })
+    return projectLangSelected
+}
+const btnSelectWorksLang = document.getElementById("btn-filter-works-lang");
+const selectProjectLangContent = document.querySelector(".filter-works-lang-content")
+btnSelectWorksLang.addEventListener("click", function(event){
+    event.stopPropagation()
+    selectProjectLangContent.classList.toggle("active");
+})
+document.addEventListener('click', function(event){
+    const isClickInside = btnSelectWorksLang.contains(event.target) || selectProjectLangContent.contains(event.target);
+    if(!isClickInside){
+        selectProjectLangContent.classList.remove("active");
+    }
+})
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("worksContainer")) {
         generateWorks("worksContainer", recentWorksData);
@@ -133,6 +154,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 const worksDataD = worksData.sort((a, b) => b.tagYear - a.tagYear)
                 return generateWorks("worksContainer2", worksDataD);
             }
+        })
+        let techSelected = []
+        selectProjectLangCheckbox.forEach(checkbox => {
+            checkbox.addEventListener("change", function(){
+                techSelected = getSelectProjectLang()
+                if(techSelected.length > 0 && Array.isArray(techSelected)){
+                    const workDataLangSelected = worksData.filter(work => work.tagTechnos.some(tech => techSelected.includes(tech)))
+                    return generateWorks("worksContainer2", workDataLangSelected)
+                }
+                else{
+                    techSelected = []
+                    return generateWorks("worksContainer2", worksData)
+                }
+            })
         })
         const selectProject = document.getElementById("select-project-by-year");
         selectProject.addEventListener('change', function filterProjectsByYear(event){
