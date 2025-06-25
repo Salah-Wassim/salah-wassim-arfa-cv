@@ -211,4 +211,7 @@
     .filter-works-lang-content{
         text-align: initial;
     }
+    .filter-works-lang-content label{
+        margin-left: 15px;
+    }
 }
