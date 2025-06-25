@@ -34,11 +34,11 @@
   font-weight: 700;
   color: rgba(17, 24, 39, 1);
   text-decoration: none;
-  transition: color var(--transition-speed) ease;
+  transition: color 0.2s ease-in-out;
 }
 
 .article-title:hover {
-  color: royalblue;
+  color: #d66a3d;
   text-decoration: none;
 }
 
