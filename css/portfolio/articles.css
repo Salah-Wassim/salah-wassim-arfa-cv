@@ -17,7 +17,7 @@
 }
 
 .articles-recent {
-    background: #EDF7FA;
+    background: #F9F1ED;
     padding: 4rem 0;
     border-top: solid 1px #000;
     border-bottom: solid 1px #000;
@@ -38,22 +38,24 @@
 
 .header-links-content p {
     font-size: 1.75rem;
-    /* font-weight: 700; */
+    font-weight: 700;
     color: var(--heading-color);
     margin: 0;
 }
-
-.header-links-content a {
-    color: #00A8CC;
+.view-all-link {
+    color: #0f172a;
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     transition: all var(--transition-speed) ease;
+    background-color: transparent;
 }
 
-.header-links-content a:hover {
-    text-decoration: underline;
+.view-all-link:hover {
+    background-color: #F08A5D;
+    color: #fff;
+    text-decoration: none;
 }
 
 /*PAGE BLOG*/
