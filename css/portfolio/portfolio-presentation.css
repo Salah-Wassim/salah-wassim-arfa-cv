@@ -22,16 +22,22 @@
     flex: 1;
 }
 
-.h1-container h1 {
+h1 {
     font-size: 3rem;
-    font-weight: 700;
-    color: var(--heading-color);
+    font-weight: 500;
     line-height: 1.2;
+    color: var(--heading-color);
     margin: 0 0 1.5rem 0;
 }
 
-.h1-container h1:first-child {
-    color: #FF6464;
+h1 .highlight {
+    color: #F08A5D;
+    margin: 0 0 1.5rem 0;
+}
+
+h1 .school {
+    font-weight: 400;
+    color: #666;
 }
 
 .accroche-container {

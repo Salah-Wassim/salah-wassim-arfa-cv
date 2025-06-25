@@ -2,17 +2,15 @@
     --primary-color: #6f42c1;
     --secondary-color: #8a63d2;
     --background-color: #f8fafc;
-    --text-color: #1e293b;
+    --text-color: #222;
     --heading-color: #0f172a;
     --border-radius: 8px;
     --transition-speed: 0.3s;
 }
-
 .works {
     background: var(--background-color);
     padding: 4rem 0;
 }
-
 .works h2{
     font-size: 2.25rem;
     margin-bottom: 2rem;
@@ -20,20 +18,18 @@
     padding-left: 12px;
     font-weight: 700;
 }
-
 .works-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
-
 .work-select-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 5px;
 }
-
-.filter-works-year, .filter-works-sort {
+.filter-works-year, .filter-works-sort, .filter-works-lang > button {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -52,20 +48,54 @@
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 16px 16px;
-  padding-right: 40px; /* pour ne pas que le texte chevauche l'icône */
+  padding-right: 40px;
 }
-
-.filter-works-year:hover, .filter-works-sort:hover{
+.filter-works-year:hover, .filter-works-sort:hover, .filter-works-lang > button:hover{
   border-color: #F08A5D;
   box-shadow: 0 4px 8px rgba(216, 113, 73, 0.25);
 }
-
-.filter-works-year:focus, .filter-works-sort:focus{
+.filter-works-year:focus, .filter-works-sort:focus, .filter-works-lang > button:focus{
   outline: none;
   border-color: #F08A5D;
   box-shadow: 0 4px 8px rgba(216, 113, 73, 0.25);
 }
-
+.filter-works-lang{
+    position: relative;
+}
+.filter-works-lang-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+ .filter-works-lang-content.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filter-works-lang-content label {
+  font-size: 0.95rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.filter-works-lang-content input[type="checkbox"] {
+  accent-color: #f08a5d;
+  width: 16px;
+  height: 16px;
+}
+.filter-works-lang > button{
+    margin-bottom: 0;
+}
 .works-content-header{
     display: flex;
     flex-direction: row;
@@ -73,24 +103,20 @@
     align-items: center;
     justify-content: space-between;
 }
-
 .work-content-message{
     text-align: center;
 }
-
 .works-title p {
     font-size: 1.75rem;
-    /* font-weight: 700; */
+    font-weight: 700;
     color: var(--heading-color);
     margin: 0 0 2rem 0;
 }
-
 .works-cards {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
-
 .work-card {
     display: flex;
     cursor: pointer;
@@ -101,33 +127,27 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform var(--transition-speed) ease;
 }
-
 .work-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
-
 .work-card-image {
     flex: 0 0 246px;
     border-radius: var(--border-radius);
     overflow: hidden;
 }
-
 .work-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-speed) ease;
 }
-
 .work-card:hover .work-card-image img {
     transform: scale(1.05);
 }
-
 .work-card-content {
     flex: 1;
 }
-
 .work-card-header p {
     font-size: 1.75rem;
     font-weight: 700;
@@ -144,45 +164,54 @@
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
-
 .tag-year {
-    background: #142850;
+    background: #F08A5D;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     font-size: 0.875rem;
     font-weight: 600;
 }
-
 .work-card-description p {
     font-size: 1rem;
     color: var(--text-color);
     line-height: 1.7;
     margin: 0;
 }
-
 @media (max-width: 768px) {
     .works-content {
         padding: 0 2rem;
     }
-    
     .work-card {
         flex-direction: column;
         padding: 1.5rem;
     }
-    
     .work-card-image {
         flex: 1 1 auto;
     }
-    
     .work-card-header p {
         font-size: 1.5rem;
     }
 }
-
 @media (max-width: 456px){
     .work-select-container{
         margin-left: auto;
         margin-right: auto;
+    }
+}
+@media (max-width: 456px){
+    .filter-works-year, .filter-works-sort, .filter-works-lang, .filter-works-lang > button{
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .filter-works-lang{
+        margin-bottom: 2rem;
+    }
+    .filter-works-lang-content{
+        text-align: initial;
+    }
+    .filter-works-lang-content label{
+        margin-left: 15px;
     }
 }

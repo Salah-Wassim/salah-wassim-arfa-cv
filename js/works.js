@@ -5,7 +5,7 @@ let worksData = [
         title: "Create Your Team",
         href:"https://github.com/Salah-Wassim/create-your-team",
         tagYear: "2024",
-        tagTechnos:["HTML", "CSS", "JS"],
+        tagTechnos:["HTML", "CSS", "JavaScript"],
         description:"Create Your Team permet de créer des équipes. Projet qui explore le concept de drag and drop"
     },
     {
@@ -14,7 +14,7 @@ let worksData = [
         title: "PGCD (Plus Grand Commun Diviseur)",
         href:"https://pgcd.vercel.app",
         tagYear: "2023",
-        tagTechnos:["HTML", "CSS", "JS", "Jenkins", "SEO", "Vercel"],
+        tagTechnos:["HTML", "CSS", "JavaScript", "Jenkins", "SEO", "Vercel"],
         description:"PGCD est une application web qui permet de calculer rapidement et gratuitement le PGCD et le PPCM de deux ou trois entiers"
     },
     {
@@ -23,7 +23,7 @@ let worksData = [
         title: "SalahBook - Blog",
         href:"",
         tagYear: "2021",
-        tagTechnos:["PHP", "Composer", "HTML5", "CSS3", "Javascript", "MySQL"],
+        tagTechnos:["PHP", "Composer", "HTML", "CSS", "JavaScript", "MySQL"],
         description:"Blog en cours de création. Projet réalisé sans framework afin d’intégrer manuellement des mécanismes fonctionnels et de sécurité, tout en approfondissant la compréhension des concepts fondamentaux."
     },
     {
@@ -41,7 +41,7 @@ let worksData = [
         title: "Bot Discord",
         href:"https://github.com/Salah-Wassim/bot-discord",
         tagYear: "2023",
-        tagTechnos:["Javascript"],
+        tagTechnos:["JavaScript"],
         description:"Bot interactif capable de répondre à trois commandes : PingMe : Vérifie la réactivité du bot. Blague : Génère une blague aléatoire. Gif : Recherche et affiche un GIF depuis la plateforme Giphy."
     },
     {
@@ -122,43 +122,76 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (document.getElementById("worksContainer2")) {
-        generateWorks("worksContainer2", worksData);
         const selectProjectSort = document.getElementById("select-project-sort");
-        selectProjectSort.addEventListener("change", function filterProjectsSort(event){
-            if(event.target.value === "c"){
-                const worksDataC = worksData.sort((a, b) => a.tagYear - b.tagYear)
-                return generateWorks("worksContainer2", worksDataC);
-            }
-            else{
-                const worksDataD = worksData.sort((a, b) => b.tagYear - a.tagYear)
-                return generateWorks("worksContainer2", worksDataD);
-            }
-        })
         const selectProject = document.getElementById("select-project-by-year");
-        selectProject.addEventListener('change', function filterProjectsByYear(event){
-            if(event.target.value === ""){
-                return generateWorks("worksContainer2", worksData)
+        const btnSelectWorksLang = document.getElementById("btn-filter-works-lang");
+        const selectProjectLangContent = document.querySelector(".filter-works-lang-content");
+        const selectProjectLangCheckbox = document.querySelectorAll('.filter-works-lang-content input[type="checkbox"]');
+        const worksContainer = document.getElementById("worksContainer2");
+
+        generateWorks("worksContainer2", worksData);
+
+        function getSelectedLangs() {
+          return Array.from(selectProjectLangCheckbox)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+        }
+
+        function filterWorks() {
+            let filtered = [...worksData];
+            
+            // Langages
+            const selectedLangs = getSelectedLangs();
+            if (selectedLangs.length > 0) {
+                filtered = filtered.filter(work =>
+                    work.tagTechnos.some(tech => selectedLangs.includes(tech))
+                );
             }
-            if(event.target.value !== "all"){
-                const worksDataFilter = worksData.filter(work => work.tagYear === event.target.value)
-                selectProjectSort.disabled = event.target.value
-                selectProjectSort.style.cursor = "not-allowed"
-                if(worksDataFilter.length > 0){
-                    return generateWorks("worksContainer2", worksDataFilter)
-                }
-                else{
-                    generateWorks("worksContainer2", worksDataFilter)
-                    const p = document.createElement("p");
-                    p.innerHTML = "Aucun projet trouvé";
-                    p.classList.add("work-content-message")
-                    return document.getElementById("worksContainer2").appendChild(p)
-                }
+          
+            // Années
+            const selectedYear = selectProject.value;
+            if (selectedYear !== "all") {
+                filtered = filtered.filter(work => work.tagYear === selectedYear);
             }
-            else{
-                selectProjectSort.disabled = false
-                selectProjectSort.style.cursor = "pointer"
-                return generateWorks("worksContainer2", worksData)
+          
+            // Tri
+            const sortOrder = selectProjectSort.value;
+            if (sortOrder === "c") {
+                filtered.sort((a, b) => a.tagYear - b.tagYear);
+            } else if (sortOrder === "d") {
+                filtered.sort((a, b) => b.tagYear - a.tagYear);
             }
-        })
+          
+            // Affichage
+            worksContainer.innerHTML = "";
+            if (filtered.length > 0) {
+                generateWorks("worksContainer2", filtered);
+            } else {
+                const p = document.createElement("p");
+                p.innerHTML = "Aucun projet trouvé";
+                p.classList.add("work-content-message");
+                worksContainer.appendChild(p);
+            }
+        }
+
+        selectProject.addEventListener("change", filterWorks);
+        selectProjectSort.addEventListener("change", filterWorks);
+        selectProjectLangCheckbox.forEach(checkbox => {
+            checkbox.addEventListener("change", filterWorks);
+        });
+
+        btnSelectWorksLang.addEventListener("click", function (event) {
+            event.stopPropagation();
+            selectProjectLangContent.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function (event) {
+            if (
+                !btnSelectWorksLang.contains(event.target) &&
+                !selectProjectLangContent.contains(event.target)
+            ) {
+                selectProjectLangContent.classList.remove("active");
+            }
+        });
     }
 });

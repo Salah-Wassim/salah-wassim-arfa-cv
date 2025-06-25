@@ -52,7 +52,7 @@ header{
     margin-left: 5px;
 }
 .header-right-content a {
-    color: #000;
+    color: rgb(50, 50, 50);
     margin: 0 1rem;
     font-weight: 600;
     text-decoration: none;
