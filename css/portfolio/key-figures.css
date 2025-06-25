@@ -12,12 +12,12 @@
 .key-figures-title {
     width: 100%;
     text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    font-weight: 600;
     color: var(--heading-color);
     margin-bottom: 3rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 .counters {
