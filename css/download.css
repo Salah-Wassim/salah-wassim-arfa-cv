@@ -5,7 +5,7 @@
     font-size: 1.3rem;
     border-radius: 0.3rem;
     font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.953);
+    background: none;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -14,7 +14,7 @@
   
   .btn-download .text {
     position: absolute;
-    left: 1.8rem;
+    left: 1.15rem;
     top: 1.3rem;
     transition: 0.4s ease-in-out;
     color: rgb(50, 50, 50);
