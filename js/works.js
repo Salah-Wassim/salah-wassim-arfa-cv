@@ -1,6 +1,15 @@
 let worksData = [
     {
         scr: "work.png",
+        alt:"Projet Server Health",
+        title: "Server Health",
+        href:"https://github.com/Salah-Wassim/server-health",
+        tagYear: "2025",
+        tagTechnos:["Shell"],
+        description:"Server Health est un script Shell permettant de surveiller l’espace disque utilisé, de définir une limite personnalisée et de consulter un processus spécifique. À la fin de l'exécution, un rapport de santé détaillé est automatiquement généré."
+    },
+    {
+        scr: "work.png",
         alt:"Projet Create Your Team",
         title: "Create Your Team",
         href:"https://github.com/Salah-Wassim/create-your-team",
