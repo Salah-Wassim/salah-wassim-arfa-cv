@@ -1,0 +1,27 @@
+/*
+  # --- Sécurité principale ---
+  Content-Security-Policy: default-src 'self';
+    img-src 'self' data: https:;
+    script-src 'self' https://kit.fontawesome.com;
+    style-src 'self' 'unsafe-inline' https://kit-free.fontawesome.com;
+    font-src 'self' https://kit-free.fontawesome.com https://ka-f.fontawesome.com;
+    connect-src 'self';
+    frame-ancestors 'none';
+    base-uri 'self';
+    form-action 'self';
+    object-src 'none';
+
+  # --- Protection contre le clickjacking ---
+  X-Frame-Options: DENY
+
+  # --- Empêche l’exécution de fichiers au mauvais type ---
+  X-Content-Type-Options: nosniff
+
+  # --- Politique de confidentialité des referers ---
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # --- Désactive les permissions navigateur inutiles ---
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+  # --- Active le HSTS (HTTPS obligatoire) ---
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
