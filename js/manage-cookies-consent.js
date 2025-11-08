@@ -14,7 +14,6 @@ btnAcceptCookies.addEventListener('click', function () {
     cookieCard.style.display = "none"
 
     if(iframeContainer.style.display === "block" && cookieCard.style.display === "none"){
-        console.log('hello')
         localStorage.setItem('usr-accept-cookies', 'true')
     }
 })
