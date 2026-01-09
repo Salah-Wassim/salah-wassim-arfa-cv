@@ -1,6 +1,24 @@
 let worksData = [
     {
         scr: "work.png",
+        alt:"Projet Strudel",
+        title: "Strudel",
+        href:"https://github.com/Salah-Wassim/strudel",
+        tagYear: "2026",
+        tagTechnos:["Strudel"],
+        description:"Ce projet est une composition electro réalisée avec Strudel, un environnement de live coding musical inspiré de TidalCycles. La musique est générée en temps réel à partir de lignes de code, mêlant logique algorithmique et composition musicale."
+    },
+    {
+        scr: "work.png",
+        alt:"SWMATH",
+        title: "SWMATH",
+        href:"https://swmath.vercel.app",
+        tagYear: "2023",
+        tagTechnos:["HTML", "CSS", "JavaScript", "Jenkins", "SEO", "Vercel"],
+        description:"SWMATH : La boîte à outils mathématiques en ligne. Calculs rapides, simples et efficaces."
+    },
+    {
+        scr: "work.png",
         alt:"Projet Server Health",
         title: "Server Health",
         href:"https://github.com/Salah-Wassim/server-health",
@@ -16,15 +34,6 @@ let worksData = [
         tagYear: "2024",
         tagTechnos:["HTML", "CSS", "JavaScript"],
         description:"Create Your Team permet de créer des équipes. Projet qui explore le concept de drag and drop"
-    },
-    {
-        scr: "work.png",
-        alt:"Projet PGCD",
-        title: "PGCD (Plus Grand Commun Diviseur)",
-        href:"https://pgcd.vercel.app",
-        tagYear: "2023",
-        tagTechnos:["HTML", "CSS", "JavaScript", "Jenkins", "SEO", "Vercel"],
-        description:"PGCD est une application web qui permet de calculer rapidement et gratuitement le PGCD et le PPCM de deux ou trois entiers"
     },
     {
         scr: "work.png",
