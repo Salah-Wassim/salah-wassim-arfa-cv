@@ -19,7 +19,7 @@ window.addEventListener("load", function(){
       iframe.src = src
       iframe.loading = "lazy"
       iframe.width = "504"
-      iframe.height = "649"
+      iframe.height = "525"
       iframe.frameBorder = "0"
       iframe.title = "Post intégré"
       iframe.style.border = "none"
