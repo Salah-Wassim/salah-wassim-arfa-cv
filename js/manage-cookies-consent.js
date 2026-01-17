@@ -5,7 +5,9 @@ const btnAcceptCookies = document.querySelector(".accept")
 const linkCvIframe = "https://www.canva.com/design/DAGq53ZgUrk/8lRVVfkd-R4BLCxKs4hqvA/view?embed"
 
 window.addEventListener("load", function(){
-  if(this.localStorage.getItem('usr-accept-cookies', 'true')){
+  const cookiesAccepted = localStorage.getItem('usr-accept-cookies') === "true";
+
+  if(cookiesAccepted){
     iframeContainer.style.display = "block"
     cookieCard.style.display = "none"
     
@@ -24,6 +26,9 @@ window.addEventListener("load", function(){
     iframe.style.margin = "0"
 
     iframeContainer.appendChild(iframe)
+  }
+  else{
+    iframeContainer.style.display = "none"
   }
 })
 
