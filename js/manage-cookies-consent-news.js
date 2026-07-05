@@ -2,6 +2,7 @@ const iframeContainer = document.querySelector('.iframes-news')
 const messageNewsCookie = document.querySelector('.wrng-news')
 
 const linkedinIframes = [
+  "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7477585056333590528",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7421469463407124480",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7401730354862145536",
   "https://www.linkedin.com/embed/feed/update/urn:li:share:7320714470090055681"
@@ -11,7 +12,7 @@ window.addEventListener("load", function(){
   const cookiesAccepted = localStorage.getItem('usr-accept-cookies') === 'true'
 
   if(cookiesAccepted){
-    iframeContainer.style.display = "flex"
+    iframeContainer.style.display = "grid"
     messageNewsCookie.textContent = ""
     messageNewsCookie.style.display = "none"
 
