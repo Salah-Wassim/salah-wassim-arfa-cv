@@ -73,10 +73,15 @@
     margin: 0 auto;
     padding: 0 2rem;
 }
-.iframes-news{
+/* .iframes-news{
   display: none;
   flex-direction: row;
   align-items: center;
+  gap: 2rem;
+} */
+.iframes-news{
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 2rem;
 }
 
